@@ -1,0 +1,254 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Művészi Portfólió</title>
+    <link rel="stylesheet" href="{% static "app_art/style.css" %}" />
+    <script src="{% static "app_art/script.js" %}"></script>
+  </head>
+  <body>
+    <!-- Fejléc -->
+    <header>
+      <a href="#" class="logo">Révfalvi <span>Péter</span></a>
+      <nav>
+        <ul>
+          <li><a href="#home">Kezdőlap</a></li>
+          <li><a href="#about">Rólam</a></li>
+          <li><a href="#portfolio">Galéria</a></li>
+          <li><a href="#contact">Kapcsolat</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero rész -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Üdvözöllek a <span class="highlight">művészi világomban</span>
+          </h1>
+          <p class="hero-subtitle">
+            Fedezd fel kreatív alkotásaimat különböző technikákban - akvarell,
+            akril, olajfestmény és ceruzarajz.
+          </p>
+          <div class="hero-cta">
+            <a href="#portfolio" class="btn btn-primary"
+              >Munkáim megtekintése</a
+            >
+            <a href="#about" class="btn btn-secondary">Rólam</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Rólam rész -->
+    <section class="about" id="about">
+      <h2 class="section-title">Rólam</h2>
+      <div class="about-content">
+        <div class="about-img">
+          <img
+            src="https://www.alkotasutca.hu/images/painters/csontvary.png"
+            alt="Művész"
+          />
+        </div>
+        <div class="about-text">
+          <h3>Kreatív utam <span>és stílusom</span></h3>
+          <p>
+            Különösen szeretem a Faber Castell termékeket, amelyek kiváló
+            minőségű színeket és textúrákat kínálnak alkotásaimhoz.
+          </p>
+          <p>
+            Munkáimban gyakran kombinálom a hagyományos és modern technikákat,
+            hogy egyedi hangulatot teremtsek.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galéria rész -->
+    <section class="portfolio" id="portfolio">
+      <h2 class="section-title">Galéria</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Összes</button>
+        <button class="filter-btn" data-filter="watercolor">Akvarell</button>
+        <button class="filter-btn" data-filter="acrylic">Akril</button>
+        <button class="filter-btn" data-filter="oil">Olaj</button>
+        <button class="filter-btn" data-filter="pencil">Ceruza</button>
+      </div>
+      <div class="portfolio-gallery">
+        <!-- Akvarell munkák -->
+        <div class="portfolio-item" data-category="watercolor">
+          <img
+            src="https://www.meska.hu/img/product/large/r/o/romandoramaria_product_273535_230325164306_942787.jpeg"
+            alt="Akvarell 1"
+          />
+          <div class="portfolio-overlay">
+            <h3>Csónakázók</h3>
+            <a href="#">Megtekintés</a>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="watercolor">
+          <img
+            src="https://images.unsplash.com/photo-1579783901586-d88db74b4fe4?ixlib=rb-4.0.3"
+            alt="Akvarell 2"
+          />
+          <div class="portfolio-overlay">
+            <h3>Szerelem vázája</h3>
+            <a href="#">Megtekintés</a>
+          </div>
+        </div>
+
+        <!-- Akril munkák -->
+        <div class="portfolio-item" data-category="acrylic">
+          <img
+            src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3"
+            alt="Akril 1"
+          />
+          <div class="portfolio-overlay">
+            <h3>Absztrakt kompozíció</h3>
+            <a href="#">Megtekintés</a>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="acrylic">
+           <img src="{% static 'app_art/akril2.jpg' %}" alt="Akril 2" />
+          <div class="portfolio-overlay">
+            <h3>Fény fája</h3>
+            <a href="#">Megtekintés</a>
+          </div>
+        </div>
+
+        <!-- Olaj munkák -->
+        <div class="portfolio-item" data-category="oil">
+          <img
+            src="https://images.unsplash.com/photo-1579783901586-d88db74b4fe4?ixlib=rb-4.0.3"
+            alt="Olaj 1"
+          />
+          <div class="portfolio-overlay">
+            <h3>Portré</h3>
+            <a href="#">Megtekintés</a>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="oil">
+          <img src="{% static 'app_art/olaj22.jpg' %}" alt="Olaj 2" />
+          <div class="portfolio-overlay">
+            <h3>Természet</h3>
+            <a href="#">Megtekintés</a>
+          </div>
+        </div>
+
+        <!-- Ceruza munkák -->
+        <div class="portfolio-item" data-category="pencil">
+          <img
+            src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3"
+            alt="Ceruza 1"
+          />
+          <div class="portfolio-overlay">
+            <h3>Portré rajz</h3>
+            <a href="#">Megtekintés</a>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="pencil">
+          <img src="{% static 'app_art/ceruza2.jpg' %}" alt="Ceruza 2" />
+          <div class="portfolio-overlay">
+            <h3>Mosolygó hölgy</h3>
+            <a href="#">Megtekintés</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kapcsolat rész -->
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
+        <div class="contact-header">
+          <h2 class="section-title">Lépj Velünk Kapcsolatba</h2>
+          <div class="contact-decoration">
+            <div class="deco-circle"></div>
+            <div class="deco-line"></div>
+          </div>
+          <p class="contact-subtitle">
+            Kérdésed van vagy egyedi ajánlatot szeretnél? Írj nekünk!
+          </p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="info-content">
+                <h3>Telefon</h3>
+                <p>+36 70 123 4567</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info-content">
+                <h3>Email</h3>
+                <p>info@info.hu</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info-content">
+                <h3>Cím</h3>
+                <p>1234 Budapest, Sport utca 5.</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group floating">
+              <input type="text" id="name" required />
+              <label for="name">Név</label>
+              <div class="underline"></div>
+            </div>
+
+            <div class="form-group floating">
+              <input type="email" id="email" required />
+              <label for="email">Email cím</label>
+              <div class="underline"></div>
+            </div>
+
+            <div class="form-group floating">
+              <textarea id="message" rows="3" required></textarea>
+              <label for="message">Üzenet</label>
+              <div class="underline"></div>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>Üzenet küldése</span>
+              <div class="submit-icon">
+                <i class="fas fa-paper-plane"></i>
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lábléc -->
+    <footer>
+      <div class="social-links">
+        <a href="#"><i>F</i></a>
+        <a href="#"><i>I</i></a>
+        <a href="#"><i>T</i></a>
+        <a href="#"><i>E</i></a>
+      </div>
+      <p>&copy; 2023 Művészi Portfólió. Minden jog fenntartva.</p>
+    </footer>
+
+   
+  </body>
+</html>
