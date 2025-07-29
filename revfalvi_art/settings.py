@@ -15,9 +15,8 @@ SECRET_KEY = 'django-insecure-@=1z$m4b1=*b^__q5b0#quxtdr-^j_kdvi6hx3%o5!046jtbf9
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1'
-    'revfalvi-art.onrender.com'
-
+    '127.0.0.1',
+    'revfalvi-art.onrender.com',
 ]
 
 
