@@ -10,4 +10,4 @@ gunicorn==21.*       # WSGI szerver (Renderen fut a Django)
 psycopg2-binary==2.* # PostgreSQL adapter (Render PostgreSQL-hez)
 whitenoise==6.*      # Statikus fájlok kezelése (CSS, JS stb.)
 dj-database-url==2.* # Adatbázis URL környezeti változóhoz
-Pillow==10.*       # Képkezelés (pl. profilképek)
+Pillow==10.*       # Képkezelés (pl. profilképek)fef
